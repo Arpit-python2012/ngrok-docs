@@ -1,20 +1,33 @@
----
-hide_table_of_contents: true
-displayed_sidebar: docs
----
+from flask import Flask
+import threading
+import pyttsx3
+import queue
+from pyngrok import ngrok
 
-import { InlineCode } from "@ngrok/mantle/inline-code";
-import ErrorDetails from "/src/components/ErrorDetails";
-import { EndpointUrlOrigin } from "/src/components/search-params-endpoint-url";
+app = Flask(__name__)
 
-# ERR_NGROK_3200
+# Queue for text-to-speech
+tts_queue = queue.Queue()
 
-### Message
+def tts_worker():
+    engine = pyttsx3.init()
+    while True:
+        text = tts_queue.get()
+        if text == "EXIT":
+            break
+        engine.say(text)
+        engine.runAndWait()
 
-The endpoint <InlineCode><EndpointUrlOrigin fallback="HOSTNAME" /></InlineCode> is offline.
+# Start TTS worker thread
+threading.Thread(target=tts_worker, daemon=True).start()
 
-<ErrorDetails error="err_ngrok_3200" />
+@app.route('/')
+def index():
+    return "<h1>AI Assistant is Running 🎉</h1><p>Public URL is working!</p>"
 
-### Further help
+# Start ngrok tunnel
+public_url = ngrok.connect(5000)
+print("Public URL:", public_url)
 
-If you're having trouble resolving this error, please reach out to [support@ngrok.com](mailto:support@ngrok.com?subject=Help%20with%20ERR_NGROK_3200)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
