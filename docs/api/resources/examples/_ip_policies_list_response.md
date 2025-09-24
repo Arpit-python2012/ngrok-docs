@@ -6,16 +6,16 @@
 {
   "ip_policies": [
     {
-      "created_at": "2025-09-22T18:34:13Z",
-      "description": "API Outbound Gateway",
-      "id": "ipp_334Ad1IUBcIrGiq0qqnImpUrHcF",
-      "uri": "https://api.ngrok.com/ip_policies/ipp_334Ad1IUBcIrGiq0qqnImpUrHcF"
+      "created_at": "2025-09-24T10:11:09Z",
+      "description": "Developer Environments",
+      "id": "ipp_338ph8PrVF6WzdG9de4WeMNj9Qk",
+      "uri": "https://api.ngrok.com/ip_policies/ipp_338ph8PrVF6WzdG9de4WeMNj9Qk"
     },
     {
-      "created_at": "2025-09-22T18:34:13Z",
-      "description": "Developer Environments",
-      "id": "ipp_334Ad0Ckkn2ET3rPP94jI0sCpXG",
-      "uri": "https://api.ngrok.com/ip_policies/ipp_334Ad0Ckkn2ET3rPP94jI0sCpXG"
+      "created_at": "2025-09-24T10:11:09Z",
+      "description": "API Outbound Gateway",
+      "id": "ipp_338ph6e4p1TarrQqyFnEZLlL0fd",
+      "uri": "https://api.ngrok.com/ip_policies/ipp_338ph6e4p1TarrQqyFnEZLlL0fd"
     }
   ],
   "next_page_uri": null,

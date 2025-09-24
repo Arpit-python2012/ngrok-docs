@@ -5,9 +5,9 @@
 ```json
 {
   "active": true,
-  "created_at": "2025-09-22T18:34:42Z",
-  "id": "bot_334AgbXs0522EAIkQzvJikQ1ZVq",
+  "created_at": "2025-09-24T10:11:38Z",
+  "id": "bot_338pkocCXcIzuCbG0pDozmv9ge2",
   "name": "new bot user from API",
-  "uri": "https://api.ngrok.com/bot_users/bot_334AgbXs0522EAIkQzvJikQ1ZVq"
+  "uri": "https://api.ngrok.com/bot_users/bot_338pkocCXcIzuCbG0pDozmv9ge2"
 }
 ```
